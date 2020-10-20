@@ -4,6 +4,7 @@
 # Handles CRUD for Collections
 class CollectionsController < ApplicationController
   before_action :authenticate_user!
+  before_action :allow_sdr_updates?
   verify_authorized
 
   def new
